@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ADA Suite" parallel="tests" preserve-order="false" thread-count="10">
+    <!--  	<parameter name="user" value=PERFECTO_USERNAME"></parameter>
+        <parameter name="password" value="PERFECTO_PASSWORD"></parameter>
+   TODO - Either generate a new Security TOKEN or Modify to use Username / Password
+        *** Or use a generated security token
+        -->
+    <parameter name="securityToken" value="securityToken"></parameter>
+    <parameter name="host" value="<your_cloud>.perfectomobile.com"></parameter>
+    <test name="Web ADA test with AXE">
+        <parameter name="url" value="https://www.perfecto.io/"></parameter>
+        <classes>
+            <class name="WebADA_Axe"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
+
